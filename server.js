@@ -24,7 +24,7 @@ setInterval(() => {
   });
 }, 1000);
 
-ws.on('message', function incoming(data) {
+wss.on('message', function incoming(data) {
   wss.clients.forEach((client) => {
     client.send(data);
   });
