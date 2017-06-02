@@ -29,3 +29,9 @@ wss.on('message', function incoming(data) {
     client.send('hello');
   });
 });
+
+wss.on('event', function incoming(data) {
+  wss.clients.forEach((client) => {
+    client.send('hello');
+  });
+});
