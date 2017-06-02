@@ -26,6 +26,6 @@ setInterval(() => {
 
 wss.on('message', function incoming(data) {
   wss.clients.forEach((client) => {
-    client.send(data);
+    client.send('hello');
   });
 });
